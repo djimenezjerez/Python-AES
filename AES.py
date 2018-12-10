@@ -217,7 +217,7 @@ def padding(inf, Nb=4):
 def unpadding(inf, Nb=4):
     ''' PKCS#7 padding '''
 
-    padding_length = ord(inf[-1])
+    padding_length = inf[-1]
 
     if padding_length < (Nb*4):
         if len(set(inf[-padding_length:])) == 1:
